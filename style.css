@@ -1,0 +1,172 @@
+/* z-index order */
+
+*{
+  box-sizing: border-box;
+  background-origin: border-box;
+  margin: 0;
+}
+
+/* Basis for colour palette comes from 1bit Monitor Glow Palette by Polyducks */
+/* https://lospec.com/palette-list/1bit-monitor-glow */
+/* you're welcome to change the colours if you want or any of the other general page style */
+:root{
+  --col-01:#222323;
+  --col-02:#f0f6f0;
+  --col-03:#5252ff;
+  --col-04:#b6e878;
+  --border: 1px solid var(--col-02);
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  background-color: #001d3d;
+  color: var(--col-02);
+  padding: 2vw;
+  font-family: 'Poppins';
+}
+
+/*
+  i've set up a basic flexbox for each recipe container - you might want to change some of the 
+  flex properties here on the container or on the individual flex items depending on how you want to style them
+*/
+
+/* Main heading */
+.main-heading{
+  font-size: 35px;
+  font-family: 'Satisfy';
+  text-align: center;
+  padding: 10px 0;
+}
+/* I have decided to change the fonts for the heading, as well as aligning it to the center for emphasis */
+
+.RecipeBox{
+  display: flex;
+  flex-direction: column;
+  border: var(--border);
+}
+
+.FilterSection{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #ffc300;
+  padding: 10px 20px;
+  color: #222323;
+  font-weight: 700;
+}
+/* Since I have chosen dark blue as the background colour, the filter section of the webpage 
+will be yellow to create contrast and makes it more visible */
+
+/* I have also re-organised the filter section so that it will look like a drop-down menu you often see in websites.
+It makes the user experiences more convenient and words are not too close to each other like the default webpage */
+
+
+.FilterBox{
+  cursor: pointer;
+}
+
+.FilterButton{
+  color: #fff;
+  background: #222323;
+  font-size: 16px;
+  padding: 4px 6px;
+  border: none;
+  cursor: pointer;
+  transition: transform 250ms ease;
+}
+.FilterButton:hover{
+  color: #d90429;
+  background: #222323;
+  transform: translateY(-4px);
+}
+
+.SelectedFilter{
+  color: #d90429;
+}
+
+/* The font size and colour are designed to be most visible in the webpage. It also improves the experiences
+for users by adding some animations. I have add a mouse-hover feature for the sub-category buttons.
+The filter/button will also turn red when selected. */
+
+
+/* Recipe Section - alignments, change of fonts, colours, designing recipe boxes*/
+.all-recipes{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 150px;
+  margin: 50px 0;
+}
+.RecipeBox{
+  width: 400px;
+  padding: 20px 30px;
+  background: #222323;
+  border-radius: 15px;
+  border: 2px solid #fff;
+  box-shadow: 0px 5px 6px 0 rgba(0, 0, 0, 0.5);
+}
+/* I have decided to keep the boxes dark grey, so it will slightly stand out from the background,
+by making suitable alignments and paddings the recipes looks more appealing and improve the usablity*/
+
+.RecipeImageContainer{
+  width: 300px;
+  height: 300px;
+  margin: 10px auto;
+}
+.RecipeImageContainer img{
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+}
+hr{
+  border: 1px solid #fff;
+}
+
+.RecipeLink{
+  text-align: center;
+}
+.RecipeLink a{
+  color: #5252ff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+}
+.RecipeLink a:hover{
+  color: #d90429;
+}
+/* The recipe's original link also have a mouse-hover feature that turns red, also adding boldness
+and increase the font size to improve visability and userbility
+I have also remove the underlines for these links so it will look cleaner and seamless. */
+
+
+.RecipeName span{
+ color: #ffc300;
+}
+
+.Author span{
+ color: #ffc300;
+}
+
+
+.Attribution a{
+  color: #5252ff;
+  text-decoration: none;
+}
+.Attribution a:hover{
+  color: #d90429;
+  text-decoration: underline;
+}
+
+.Publisher span, .Cuisine span, .TimeToCook span,
+.SkillLevel span, .Course span, .Servings span, .Dietary span,
+.DatePublished span, .DateUpdated span, .SpecialEquipment span{
+  color: #ffc300;
+}
+
+/* Overall design: changing different colours to different elements to provide contrast, 
+adjusting alignments, paddings, font styles for a better looking webpage and also helps 
+to improve users' experience, usability and visability. */
+
+/* Adding some hover-over features also help with the effectiveness of the filtered webpage,
+making this food blog more alive and engaging. */
+
